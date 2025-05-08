@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
@@ -5,7 +6,8 @@
   <style>
     body {
       font-family: Times New Roman, KaiTi;
-    }h1 {
+    }
+    h1 {
       color: #4CAF50;
     }
     p {
@@ -39,7 +41,8 @@
       background-color: #45a049;
     }
   </style>
-<head/>
+</head>
+<body>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
   <p>
     你心目中的“教师之星”是谁？⭐<br>
@@ -77,28 +80,13 @@
   </form>
 
   <script>
-    const teacherOptions = `
-      <option value="">请选择老师</option>
-      <option value="林金龙校长">林金龙校长</option>
-      <option value="黄莉蚡副校长">黄莉蚡副校长</option>
-      <option value="谭锐涟副校长">谭锐涟副校长</option>
-      <option value="陈惠媛副校长">陈惠媛副校长</option>
-      <option value="王秀玉师">王秀玉师</option>
-      <option value="张月娇师">张月娇师</option>
-      <option value="李佩芬师">李佩芬师</option>
-      <option value="徐凯君师">徐凯君师</option>
-      <option value="陈佩仪师">陈佩仪师</option>
-      <option value="石敏静师">石敏静师</option>
-      <option value="方采灵师">方采灵师</option>
-      <option value="李慧琴师">李慧琴师</option>
-      <option value="蓝美蔚师">蓝美蔚师</option>
-      <option value="Cik Ainnur Zahirah">Cik Ainnur Zahirah</option>
-      <option value="刘筱莹师">刘筱莹师</option>
-      <option value="李丽琴师">李丽琴师</option>
-      <option value="Cik Nurdini Qistina">Cik Nurdini Qistina</option>
-      <option value="郑艺璇师">郑艺璇师</option>
-      <option value="Pn. Hanizatul Akma">Pn. Hanizatul Akma</option>
-      <option value="黄蛟鄕师">黄蛟鄕师</option>`;
+    const teachers = [
+      "林金龙校长", "黄莉蚡副校长", "谭锐涟副校长", "陈惠媛副校长",
+      "王秀玉师", "张月娇师", "李佩芬师", "徐凯君师", "陈佩仪师",
+      "石敏静师", "方采灵师", "李慧琴师", "蓝美蔚师", "Cik Ainnur Zahirah",
+      "刘筱莹师", "李丽琴师", "Cik Nurdini Qistina", "郑艺璇师",
+      "Pn. Hanizatul Akma", "黄蛟鄕师"
+    ];
 
     const awards = [
       "最有爱心老师 · Most Caring Teacher",
@@ -123,27 +111,40 @@
       "学校领航之星 · Star of School Drive & Direction"
     ];
 
+    const selectedMap = new Map();
+
+    function generateOptions(exclude = "") {
+      return teachers
+        .filter(name => ![...selectedMap.values()].includes(name) || name === exclude)
+        .map(name => `<option value="${name}">${name}</option>`)
+        .join("");
+    }
+
+    function refreshAllSelects() {
+      document.querySelectorAll("select.teacher-select").forEach(select => {
+        const currentValue = select.value;
+        select.innerHTML = `<option value="">请选择老师</option>` + generateOptions(currentValue);
+        select.value = currentValue; // 保持当前选中值
+      });
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("awardFields");
-      let selectedTeachers = new Set();
 
       awards.forEach((title, index) => {
         const label = document.createElement("label");
         label.textContent = title;
+
         const select = document.createElement("select");
         select.name = `award${index + 1}`;
+        select.classList.add("teacher-select");
         select.required = true;
 
-        select.innerHTML = teacherOptions;
+        select.innerHTML = `<option value="">请选择老师</option>` + generateOptions();
 
         select.addEventListener("change", () => {
-          const selectedValue = select.value;
-          if (selectedTeachers.has(selectedValue)) {
-            alert("每位老师只能选择一次，请重新选择！");
-            select.value = ""; // 取消选择
-          } else {
-            selectedTeachers.add(selectedValue);
-          }
+          selectedMap.set(index, select.value);
+          refreshAllSelects();
         });
 
         container.appendChild(label);
