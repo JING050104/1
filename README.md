@@ -39,7 +39,7 @@
       background-color: #45a049;
     }
   </style>
-<body>
+<head/>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
   <p>
     你心目中的“教师之星”是谁？⭐<br>
