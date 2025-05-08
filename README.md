@@ -41,6 +41,7 @@
     <button type="submit">提交</button>
   </form>
 
+  <!-- 移动 script 到页面最后 -->
   <script>
     const teacherOptions = `
       <option value="">请选择老师</option>
@@ -63,7 +64,8 @@
       <option value="Cik Nurdini Qistina">Cik Nurdini Qistina</option>
       <option value="郑艺璇师">郑艺璇师</option>
       <option value="Pn. Hanizatul Akma">Pn. Hanizatul Akma</option>
-      <option value="黄蛟鄕师">黄蛟鄕师</option>`;
+      <option value="黄蛟鄕师">黄蛟鄕师</option>
+    `;
 
     const awards = [
       "最有爱心老师 · Most Caring Teacher",
@@ -88,7 +90,7 @@
       "学校领航之星 · Star of School Drive & Direction"
     ];
 
-    window.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("awardFields");
       awards.forEach((title, index) => {
         const label = document.createElement("label");
@@ -107,3 +109,4 @@
   </script>
 </body>
 </html>
+
