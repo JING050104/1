@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <title>Teacher Awards 2025</title>
 </head>
-<body>
-   <style>
+  <style>
     body {
       font-family: Times New Roman,Kaiti;
       margin: 20px;
     }
+    </style>
+<body>
+   
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
   <p>
     你心目中的“教师之星”是谁？⭐<br>
