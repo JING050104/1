@@ -12,7 +12,7 @@
       margin: 20px;
     }
     h1 {
-      color: #4CAF50;
+      color: Rgb (0, 0, 0;
     }
     p {
       font-size: 1.2em;
