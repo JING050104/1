@@ -39,7 +39,6 @@
       background-color: #45a049;
     }
   </style>
-</head>
 <body>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
   <p>
