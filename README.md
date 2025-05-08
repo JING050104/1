@@ -19,9 +19,9 @@
     快来投票吧🏆
   </p>
 
-  <form id="voteForm" method="POST" action="https://script.google.com/macros/s/AKfycbzyNlGXrk9FA4mCQIb-AKdbq7lfM-9r3PVpI_UAmGgVcAAudrEMtn67pAHa5-AqoXDbxg/exec">
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbzyNlGXrk9FA4mCQIb-AKdbq7lfM-9r3PVpI_UAmGgVcAAudrEMtn67pAHa5-AqoXDbxg/exec">
     <label>中文姓名：</label>
-    <input type="text" name="name" required /><br><br>
+    <input type="text" name="name" required><br><br>
 
     <label>班级：</label>
     <select id="class" name="class" required>
@@ -41,7 +41,6 @@
     <button type="submit">提交</button>
   </form>
 
-  <!-- 移动 script 到页面最后 -->
   <script>
     const teacherOptions = `
       <option value="">请选择老师</option>
@@ -109,4 +108,5 @@
   </script>
 </body>
 </html>
+
 
