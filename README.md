@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</title>
   <style>
+    header {
+    display: none;
+    }
     body {
       font-family: Times New Roman,Kaiti;
       margin: 20px;
