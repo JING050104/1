@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
@@ -41,8 +39,6 @@
       background-color: #45a049;
     }
   </style>
-</head>
-<body>
 </head>
 <body>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
