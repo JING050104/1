@@ -5,7 +5,7 @@
   <title>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Times New Roman,Kaiti;
       margin: 20px;
     }
     h1 {
