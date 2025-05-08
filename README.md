@@ -19,9 +19,9 @@
     快来投票吧🏆
   </p>
 
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbzyNlGXrk9FA4mCQIb-AKdbq7lfM-9r3PVpI_UAmGgVcAAudrEMtn67pAHa5-AqoXDbxg/exec">
+  <form id="voteForm" method="POST" action="https://script.google.com/macros/s/AKfycbzyNlGXrk9FA4mCQIb-AKdbq7lfM-9r3PVpI_UAmGgVcAAudrEMtn67pAHa5-AqoXDbxg/exec">
     <label>中文姓名：</label>
-    <input type="text" name="name" required><br><br>
+    <input type="text" name="name" required /><br><br>
 
     <label>班级：</label>
     <select id="class" name="class" required>
@@ -63,8 +63,7 @@
       <option value="Cik Nurdini Qistina">Cik Nurdini Qistina</option>
       <option value="郑艺璇师">郑艺璇师</option>
       <option value="Pn. Hanizatul Akma">Pn. Hanizatul Akma</option>
-      <option value="黄蛟鄕师">黄蛟鄕师</option>
-    `;
+      <option value="黄蛟鄕师">黄蛟鄕师</option>`;
 
     const awards = [
       "最有爱心老师 · Most Caring Teacher",
@@ -89,15 +88,30 @@
       "学校领航之星 · Star of School Drive & Direction"
     ];
 
-    document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("awardFields");
+      let selectedTeachers = new Set();
+
       awards.forEach((title, index) => {
         const label = document.createElement("label");
         label.textContent = title;
         const select = document.createElement("select");
         select.name = `award${index + 1}`;
         select.required = true;
+
         select.innerHTML = teacherOptions;
+
+        // 处理重复选择逻辑
+        select.addEventListener("change", () => {
+          const selectedValue = select.value;
+          if (selectedTeachers.has(selectedValue)) {
+            alert("每位老师只能选择一次，请重新选择！");
+            select.value = ""; // 取消选择
+          } else {
+            selectedTeachers.add(selectedValue);
+          }
+        });
+
         container.appendChild(label);
         container.appendChild(document.createElement("br"));
         container.appendChild(select);
@@ -108,5 +122,3 @@
   </script>
 </body>
 </html>
-
-
