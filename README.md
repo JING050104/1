@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Teacher Awards 2025</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif, "KaiTi", sans-serif;
+    }
+  </style>
 </head>
 <body>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
@@ -109,6 +114,17 @@
             select.value = ""; // 取消选择
           } else {
             selectedTeachers.add(selectedValue);
+            // 禁用已选择的老师
+            Array.from(container.querySelectorAll("select")).forEach(s => {
+              const options = s.querySelectorAll("option");
+              options.forEach(option => {
+                if (selectedTeachers.has(option.value)) {
+                  option.disabled = true;
+                } else {
+                  option.disabled = false;
+                }
+              });
+            });
           }
         });
 
