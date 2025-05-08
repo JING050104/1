@@ -38,7 +38,7 @@
 </head>
 <body>
   <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
-  <form id="voteForm">
+  <form id="voteForm" method="POST" action="https://script.google.com/macros/s/AKfycby0T98gbx4j3J5AeHSxn_e5K5eK435Ohs03gH2mIvF2lUUKj7U671de1-YFtVtdMOIwXQ/exec">
     <label>中文姓名：</label>
     <input type="text" name="name" required><br>
 
