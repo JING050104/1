@@ -47,7 +47,7 @@
   </form>
 
   <script>
-    const teacherOptions = `
+    const teacherOptions = 
       <option value="">请选择老师</option>
       <option value="林金龙校长">林金龙校长</option>
       <option value="黄莉蚡副校长">黄莉蚡副校长</option>
@@ -68,7 +68,7 @@
       <option value="Cik Nurdini Qistina">Cik Nurdini Qistina</option>
       <option value="郑艺璇师">郑艺璇师</option>
       <option value="Pn. Hanizatul Akma">Pn. Hanizatul Akma</option>
-      <option value="黄蛟鄕师">黄蛟鄕师</option>`;
+      <option value="黄蛟鄕师">黄蛟鄕师</option>;
 
     const awards = [
       "最有爱心老师 · Most Caring Teacher",
@@ -101,7 +101,7 @@
         const label = document.createElement("label");
         label.textContent = title;
         const select = document.createElement("select");
-        select.name = `award${index + 1}`;
+        select.name = award${index + 1};
         select.required = true;
 
         select.innerHTML = teacherOptions;
@@ -114,17 +114,6 @@
             select.value = ""; // 取消选择
           } else {
             selectedTeachers.add(selectedValue);
-            // 禁用已选择的老师
-            Array.from(container.querySelectorAll("select")).forEach(s => {
-              const options = s.querySelectorAll("option");
-              options.forEach(option => {
-                if (selectedTeachers.has(option.value)) {
-                  option.disabled = true;
-                } else {
-                  option.disabled = false;
-                }
-              });
-            });
           }
         });
 
