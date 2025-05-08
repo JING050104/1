@@ -13,12 +13,6 @@
     p {
       font-size: 1.2em;
     }
-    .form-container {
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin-top: 20px;
-      background-color: #f9f9f9;
-    }
     label {
       font-weight: bold;
     }
@@ -52,8 +46,7 @@
     用你宝贵的一票，向你最爱的老师送上最闪亮的荣誉～✨<br><br>
     📌 规则简单：<br>
     - 每人只能投一次票哦（公平公正，老师不许贿选！）<br>
-    - 按照你真实的感受选择就对了，老师不会生气，真的！<br>
-    - 给每个老师一票，不要重复选！让票选更神圣！<br><br>
+    - 给每位老师一个奖项，不可重复选择！<br><br>
     快来投票吧🏆
   </p>
 
@@ -62,7 +55,7 @@
     <input type="text" name="name" required /><br><br>
 
     <label>班级：</label>
-    <select id="class" name="class" required>
+    <select name="class" required>
       <option value="">请选择班级</option>
       <option value="1R">1R</option>
       <option value="2R">2R</option>
@@ -111,20 +104,36 @@
       "学校领航之星 · Star of School Drive & Direction"
     ];
 
-    const selectedMap = new Map();
+    const selectedTeachers = {};
 
-    function generateOptions(exclude = "") {
-      return teachers
-        .filter(name => ![...selectedMap.values()].includes(name) || name === exclude)
-        .map(name => `<option value="${name}">${name}</option>`)
-        .join("");
+    function createSelect(index) {
+      const select = document.createElement("select");
+      select.name = `award${index + 1}`;
+      select.dataset.index = index;
+      select.classList.add("teacher-select");
+      select.required = true;
+      updateSelectOptions(select);
+      return select;
     }
 
-    function refreshAllSelects() {
-      document.querySelectorAll("select.teacher-select").forEach(select => {
-        const currentValue = select.value;
-        select.innerHTML = `<option value="">请选择老师</option>` + generateOptions(currentValue);
-        select.value = currentValue; // 保持当前选中值
+    function updateSelectOptions(select) {
+      const index = select.dataset.index;
+      const currentValue = selectedTeachers[index] || "";
+      select.innerHTML = '<option value="">请选择老师</option>';
+      teachers.forEach(teacher => {
+        if (!Object.values(selectedTeachers).includes(teacher) || teacher === currentValue) {
+          const option = document.createElement("option");
+          option.value = teacher;
+          option.textContent = teacher;
+          if (teacher === currentValue) option.selected = true;
+          select.appendChild(option);
+        }
+      });
+    }
+
+    function updateAllSelects() {
+      document.querySelectorAll(".teacher-select").forEach(select => {
+        updateSelectOptions(select);
       });
     }
 
@@ -134,17 +143,11 @@
       awards.forEach((title, index) => {
         const label = document.createElement("label");
         label.textContent = title;
-
-        const select = document.createElement("select");
-        select.name = `award${index + 1}`;
-        select.classList.add("teacher-select");
-        select.required = true;
-
-        select.innerHTML = `<option value="">请选择老师</option>` + generateOptions();
+        const select = createSelect(index);
 
         select.addEventListener("change", () => {
-          selectedMap.set(index, select.value);
-          refreshAllSelects();
+          selectedTeachers[index] = select.value;
+          updateAllSelects();
         });
 
         container.appendChild(label);
