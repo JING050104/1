@@ -136,7 +136,6 @@
 
         select.innerHTML = teacherOptions;
 
-        // 处理重复选择逻辑
         select.addEventListener("change", () => {
           const selectedValue = select.value;
           if (selectedTeachers.has(selectedValue)) {
