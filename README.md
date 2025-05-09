@@ -22,16 +22,6 @@
     margin-bottom: 15px;
   }
   
-  input[type="text"],
-  select {
-    font-size: 16px;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dadce0;
-    border-radius: 6px;
-    margin-bottom: 16px;
-    background-color: white;
-  }
 
   .form-container {
     width: 100%;
@@ -47,11 +37,23 @@
   }
 
   label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #202124;
-  }
+  display: block;
+  font-size: 14px; /* already 14px */
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+input[type="text"],
+select {
+  font-size: 14px; 
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: white;
+}
+
 
   button {
     background-color: #1a73e8;
