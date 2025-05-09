@@ -40,7 +40,13 @@
     }
     input[type="text"],
     select {
-      font-size: clamp(14px, 2.5vw, 18px); /* 自适应字体大小 */
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 16px;
+      background-color: white;
     }
 
     button {
