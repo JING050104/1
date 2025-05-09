@@ -41,6 +41,7 @@
   font-size: 14px; /* already 14px */
   margin-bottom: 8px;
   color: #202124;
+  font-weight:bold;
 }
 
 input[type="text"],
