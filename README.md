@@ -230,7 +230,7 @@
       awards: awards
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbxF8pcMMiub-PmiFBGxHburtlJpOTYGkTKodhiUj2Q26PepDx-T8GEGNvyDJbfDOBcdkA/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzIrxlOFLqN6daaS_padE5MAtyir9wC5Ikz1MWGf8y9B8id_t3XagPBFSkKT_QqL7XGnA/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
