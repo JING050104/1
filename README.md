@@ -11,19 +11,20 @@
     padding: 30px;
     color: #202124;
   }
-  title{
-    font-size: 30px;
-  }
-
   h1 {
-    color: #1a73e8;
-    font-size: 20px;
+  color: #1a73e8;
+  font-size: 25px;
   }
-
+  
   h2 {
-    font-size: 15px;
+    font-size: 10px !important;
     line-height: 1.5;
     margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  select {
+    font-size: 16px !important;
   }
 
   .form-container {
@@ -44,17 +45,6 @@
     font-weight: bold;
     margin-bottom: 8px;
     color: #202124;
-  }
-
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dadce0;
-    border-radius: 6px;
-    font-size: 15px; 
-    margin-bottom: 16px;
-    background-color: white;
   }
 
   button {
