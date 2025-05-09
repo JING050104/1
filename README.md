@@ -108,7 +108,7 @@
     const teachers = [
       "林金龙校长", "黄莉蚡副校长", "谭锐涟副校长", "陈惠媛副校长",
       "王秀玉师", "张月娇师", "李佩芬师", "徐凯君师", "陈佩仪师",
-      "石敏静师", "方采灵师", "李慧琴师", "蓝美蔚师", "Cik Ainnur Zahirah",
+      "石敏静师", "方采灵师", "李慧琴师", "蓝美蔚师", "Cik Ainnur Zahirah"，
       "刘筱莹师", "李丽琴师", "Cik Nurdini Qistina", "郑艺璇师",
       "Pn. Hanizatul Akma", "黄蛟鄕师"
     ];
@@ -230,7 +230,7 @@
       awards: awards
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbw6gjsdYkVMZ5ecESv3SUnVp5z8RR5TG0SyOJ_hKJEHPgBZA23gjDojLol2FFTDn7kDcQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxF8pcMMiub-PmiFBGxHburtlJpOTYGkTKodhiUj2Q26PepDx-T8GEGNvyDJbfDOBcdkA/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
