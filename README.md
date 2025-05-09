@@ -2,23 +2,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Teacher Awards 2025</title>
-    <style>
+  <style>
     body {
-      font-family:Times New Roman,Kaiti;
-      background-color: #f8f9fa;
+      font-family: "Times New Roman", "Kaiti", sans-serif;
+      background-color: #f0f2f5;
       padding: 30px;
       color: #202124;
     }
-    h2 {
-      text-align: left;
+    h1 {
+      text-align: center;
       color: #1a73e8;
     }
-    .card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(60,64,67,0.3);
-      padding: 20px;
-      margin-bottom: 20px;
+    h2 {
+      font-weight: normal;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .section-card {
+      margin-bottom: 30px;
     }
     label {
       display: block;
@@ -26,25 +35,27 @@
       margin-bottom: 8px;
       color: #202124;
     }
+    input[type="text"],
     select {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #dadce0;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 16px;
+      margin-bottom: 16px;
       background-color: white;
-      appearance: none;
     }
     button {
       background-color: #1a73e8;
       color: white;
       font-size: 16px;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
       display: block;
-      margin: 20px auto;
+      margin: 30px auto 0;
+      transition: background-color 0.2s;
     }
     button:hover {
       background-color: #1765cc;
@@ -52,41 +63,46 @@
   </style>
 </head>
 <body>
-  <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
-  <h2>你心目中的“教师之星”是谁？⭐  <br>
-是那个讲课超有梗、考试还会偷偷提示的“神助攻老师”？   <br>
-还是每天像福尔摩斯一样盯作业、却又偷偷关心你的“刀子嘴豆腐心老师”？👀 <br>
- <br>
-【益侨教师之星】票选正式开始啦！   <br>
-用你宝贵的一票，向你最爱的老师送上最闪亮的荣誉～✨ <br>
- <br>
-📌 规则简单：   <br>
-- 每人只能投一次票哦（公平公正，老师不许贿选！）   <br>
-- 按照你真实的感受选择就对了，老师不会生气，真的！ <br>
--给每个老师一票，不要重复选！让票选更神圣！ <br>
- <br>
-快来投票吧🏆<h2/>
-  <form id="voteForm">
-    <label>中文姓名：</label>
-    <input type="text" name="name" required><br>
+  <div class="form-container">
+    <h1>Teacher Awards 2025: The Yik Chiao Teacher Star Poll</h1>
+    <h2>你心目中的“教师之星”是谁？⭐<br>
+      是那个讲课超有梗、考试还会偷偷提示的“神助攻老师”？<br>
+      还是每天像福尔摩斯一样盯作业、却又偷偷关心你的“刀子嘴豆腐心老师”？👀<br><br>
+      【益侨教师之星】票选正式开始啦！<br>
+      用你宝贵的一票，向你最爱的老师送上最闪亮的荣誉～✨<br><br>
+      📌 规则简单：<br>
+      - 每人只能投一次票哦（公平公正，老师不许贿选！）<br>
+      - 按照你真实的感受选择就对了，老师不会生气，真的！<br>
+      - 给每个老师一票，不要重复选！让票选更神圣！<br><br>
+      快来投票吧🏆
+    </h2>
 
-    <label>班级：</label>
-    <select name="class" required>
-      <option value="">请选择班级</option>
-      <option value="1R">1R</option>
-      <option value="2R">2R</option>
-      <option value="3R">3R</option>
-      <option value="4R">4R</option>
-      <option value="4Y">4Y</option>
-      <option value="5R">5R</option>
-      <option value="6R">6R</option>
-      <option value="6Y">6Y</option>
-    </select><br>
+    <form id="voteForm">
+      <div class="section-card">
+        <label>中文姓名：</label>
+        <input type="text" name="name" required>
+      </div>
 
-    <div id="awardFields"></div>
+      <div class="section-card">
+        <label>班级：</label>
+        <select name="class" required>
+          <option value="">请选择班级</option>
+          <option value="1R">1R</option>
+          <option value="2R">2R</option>
+          <option value="3R">3R</option>
+          <option value="4R">4R</option>
+          <option value="4Y">4Y</option>
+          <option value="5R">5R</option>
+          <option value="6R">6R</option>
+          <option value="6Y">6Y</option>
+        </select>
+      </div>
 
-    <button type="submit">提交</button>
-  </form>
+      <div id="awardFields"></div>
+
+      <button type="submit">提交</button>
+    </form>
+  </div>
 
   <script>
     const teachers = [
@@ -124,7 +140,6 @@
 
     function renderOptions(currentIndex) {
       return teachers.filter(t => {
-        // 只排除其他下拉框中选的老师
         for (const [key, val] of selected) {
           if (key !== currentIndex && val === t) return false;
         }
@@ -133,6 +148,9 @@
     }
 
     function createAwardSelect(index, awardName) {
+      const section = document.createElement("div");
+      section.className = "section-card";
+
       const label = document.createElement("label");
       label.textContent = awardName;
 
@@ -178,21 +196,19 @@
         });
       });
 
-      // 初始化渲染
       render();
-
-      return [label, select];
+      section.appendChild(label);
+      section.appendChild(select);
+      return section;
     }
 
     window.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("awardFields");
       awards.forEach((award, i) => {
-        const [label, select] = createAwardSelect(i, award);
-        container.appendChild(label);
-        container.appendChild(document.createElement("br"));
-        container.appendChild(select);
-        container.appendChild(document.createElement("br"));
-        container.appendChild(document.createElement("br"));
+        const section = createAwardSelect(i, award);
+        container.appendChild(section);
       });
     });
   </script>
+</body>
+</html>
