@@ -117,32 +117,29 @@ select {
     </form>
   </div>
 
-  <script>
-    const teachers = [
-      const teachers = [
-  "En. Lim Kim Leong \"林金龙校长\"",
-  "Pn. Ooi Suat Hoon \"黄莉纷副校长\"",
-  "Cik Tam Swee Lian \"谭锐涟副校长\"",
-  "Pn. Tan Huay Yen \"陈惠媛副校长\"",
-  "Pn. Wong Siew Yik \"王秀玉师\"",
-  "Pn. Teo Guat Keow \"张月娇师\"",
-  "Pn. Lee Pei Feng \"李佩芬师\"",
-  "Cik See Kai Jun \"徐凯君师\"",
-  "Cik Tung Pei Yee \"陈佩仪师\"",
-  "Cik Cheok Li Ching \"石敏静师\"",
-  "Pn. Hong Chai Leng \"方采灵师\"",
-  "Pn. Lee Fee Chin \"李慧琴师\"",
-  "Pn. Lam Mei Wei \"蓝美蔚师\"",
-  "Cik Ainnur Zahirah",
-  "Cik Connie Law Siao Ying \"刘筱莹师\"",
-  "Pn. Lee Li Khim \"李丽琴师\"",
-  "Cik Nurdini Qistina",
-  "Cik Teh Yi Suan \"郑艺璇师\"",
-  "Pn. Hanizatul Akma",
-  "Pn. Wong Chiau Siang \"黄蛟鄕师\""
+  <script>const teachers = [
+  'En. Lim Kim Leong "林金龙校长"',
+  'Pn. Ooi Suat Hoon "黄莉纷副校长"',
+  'Cik Tam Swee Lian "谭锐涟副校长"',
+  'Pn. Tan Huay Yen "陈惠媛副校长"',
+  'Pn. Wong Siew Yik "王秀玉师"',
+  'Pn. Teo Guat Keow "张月娇师"',
+  'Pn. Lee Pei Feng "李佩芬师"',
+  'Cik See Kai Jun "徐凯君师"',
+  'Cik Tung Pei Yee "陈佩仪师"',
+  'Cik Cheok Li Ching "石敏静师"',
+  'Pn. Hong Chai Leng "方采灵师"',
+  'Pn. Lee Fee Chin "李慧琴师"',
+  'Pn. Lam Mei Wei "蓝美蔚师"',
+  'Cik Ainnur Zahirah',
+  'Cik Connie Law Siao Ying "刘筱莹师"',
+  'Pn. Lee Li Khim "李丽琴师"',
+  'Cik Nurdini Qistina',
+  'Cik Teh Yi Suan "郑艺璇师"',
+  'Pn. Hanizatul Akma',
+  'Pn. Wong Chiau Siang "黄蛟鄕师"'
 ];
 
-    ];
 
     const awards = [
       "最有爱心老师 · Most Caring Teacher",
