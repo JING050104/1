@@ -1,73 +1,76 @@
 <html lang="zh">
 <head>
-  
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Teacher Awards 2025</title>
   <style>
-   body {
-  font-family: 'PT Serif', serif;
-  background-color: #f0f2f5;
-  padding: 30px;
-  color: #202124;
-    }
-    
-    h1 {
-      color: #1a73e8;
-      font-size:25px;
-    }
-    
-    h2 {
-      font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
+  body {
+    font-family: 'PT Serif', serif;
+    background-color: #f0f2f5;
+    padding: 30px;
+    color: #202124;
+  }
 
-    .form-container {
-      width: 100%;
-      margin: 0 auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .section-card {
-      margin-bottom: 30px;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #202124;
-    }
-    input[type="text"],
-    select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #dadce0;
-      border-radius: 6px;
-      font-size: 16px;
-      margin-bottom: 16px;
-      background-color: white;
-    }
+  h1 {
+    color: #1a73e8;
+    font-size: 25px;
+  }
 
-    button {
-      background-color: #1a73e8;
-      color: white;
-      font-size: 20px;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      display: block;
-      margin: 30px auto 0;
-      transition: background-color 0.2s;
-    }
-    button:hover {
-      background-color: #1765cc;
-    }
-    
-  </style>
+  h2 {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .form-container {
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-card {
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #202124;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 12px; /* 改为12px */
+    margin-bottom: 16px;
+    background-color: white;
+  }
+
+  button {
+    background-color: #1a73e8;
+    color: white;
+    font-size: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #1765cc;
+  }
+</style>
+
 </head>
 <body>
   <div class="form-container">
