@@ -4,7 +4,7 @@
   <title>Teacher Awards 2025</title>
   <style>
     body {
-      font-family: Times New Roman, KaiTi, KaiTi SC, STKaiti, serif;
+      font: Times New Roman, KaiTi, KaiTi SC, STKaiti, serif;
       background-color: #f0f2f5;
       padding: 30px;
       color: #202124;
