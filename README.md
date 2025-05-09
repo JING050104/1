@@ -10,10 +10,13 @@
     padding: 30px;
     color: #202124;
   }
+  title{
+    font-size: 30px;
+  }
 
   h1 {
     color: #1a73e8;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   h2 {
@@ -48,7 +51,7 @@
     padding: 12px;
     border: 1px solid #dadce0;
     border-radius: 6px;
-    font-size: 12px; /* 改为12px */
+    font-size: 15px; 
     margin-bottom: 16px;
     background-color: white;
   }
