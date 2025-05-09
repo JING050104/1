@@ -10,11 +10,10 @@
       color: #202124;
     }
     h1 {
-      text-align: center;
       color: #1a73e8;
     }
     h2 {
-      font-weight: normal;
+      font-size: 25px;
       line-height: 1.6;
       margin-bottom: 30px;
     }
@@ -48,7 +47,7 @@
     button {
       background-color: #1a73e8;
       color: white;
-      font-size: 16px;
+      font-size: 20px;
       padding: 14px 28px;
       border: none;
       border-radius: 6px;
