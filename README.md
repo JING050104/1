@@ -14,11 +14,11 @@
     
     h1 {
       color: #1a73e8;
-      font-size: clamp(24px, 5vw, 40px);
+      font-size:25px;
     }
     
     h2 {
-      font-size: clamp(14px, 3.5vw, 20px);
+      font-size: 15px;
       line-height: 1.5;
       margin-bottom: 15px;
     }
