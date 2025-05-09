@@ -13,12 +13,12 @@
       color: #1a73e8;
     }
     h2 {
-      font-size: 25px;
+      font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
     .form-container {
-      max-width: 800px;
+      width: 100%;
       margin: 0 auto;
       background: #fff;
       padding: 40px;
