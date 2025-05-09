@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +10,7 @@
       color: #202124;
     }
     h2 {
-      text-align: center;
+      text-align: left;
       color: #1a73e8;
     }
     .card {
