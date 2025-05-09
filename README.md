@@ -212,3 +212,41 @@
   </script>
 </body>
 </html>
+<script>
+  document.getElementById("voteForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const awards = [];
+    for (let i = 0; i < 20; i++) {
+      awards.push(formData.get("award" + i));
+    }
+
+    const data = {
+      name: formData.get("name"),
+      class: formData.get("class"),
+      awards: awards
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbw6gjsdYkVMZ5ecESv3SUnVp5z8RR5TG0SyOJ_hKJEHPgBZA23gjDojLol2FFTDn7kDcQ/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(res => res.json())
+      .then(result => {
+        if (result.status === "success") {
+          alert("投票成功，感谢你的参与！");
+          form.reset();
+        } else {
+          alert("提交失败，请稍后再试！");
+        }
+      }).catch(err => {
+        alert("网络错误，提交失败！");
+        console.error(err);
+      });
+  });
+</script>
