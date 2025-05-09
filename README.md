@@ -1,13 +1,14 @@
 <html lang="zh">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Teacher Awards 2025</title>
   <style>
-    body {
-      font: PT serif;
-      background-color: #f0f2f5;
-      padding: 30px;
-      color: #202124;
+   body {
+  font-family: 'PT Serif', serif;
+  background-color: #f0f2f5;
+  padding: 30px;
+  color: #202124;
     }
     
     h1 {
