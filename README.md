@@ -12,12 +12,15 @@
     
     h1 {
       color: #1a73e8;
+      font-size: clamp(24px, 5vw, 40px);
     }
+    
     h2 {
-      font-size: 15px;
+      font-size: clamp(14px, 3.5vw, 20px);
       line-height: 1.5;
       margin-bottom: 15px;
     }
+
     .form-container {
       width: 100%;
       margin: 0 auto;
@@ -37,14 +40,9 @@
     }
     input[type="text"],
     select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #dadce0;
-      border-radius: 6px;
-      font-size: 16px;
-      margin-bottom: 16px;
-      background-color: white;
+      font-size: clamp(14px, 2.5vw, 18px); /* 自适应字体大小 */
     }
+
     button {
       background-color: #1a73e8;
       color: white;
