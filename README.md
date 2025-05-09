@@ -48,7 +48,7 @@
 
   label {
     display: block;
-    font-weight: bold;
+    font-size: 14px;
     margin-bottom: 8px;
     color: #202124;
   }
